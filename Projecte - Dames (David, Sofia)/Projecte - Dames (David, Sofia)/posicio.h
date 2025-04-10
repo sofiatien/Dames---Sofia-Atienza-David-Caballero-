@@ -17,7 +17,8 @@ public:
 	int getColumna() const { return m_columna; }
 	void setFila(int fila) { m_fila = fila; }
 	void setColumna(int columna) { m_columna = columna; }
-	bool PosicioValida() const { return m_fila >= 0 && m_columna >= 0; }
+	bool PosicioValida() const {return m_fila >= 0 && m_fila < N_FILES &&
+           m_columna >= 0 && m_columna < N_COLUMNES; }
 	string toString() const;
 	void fromString(const string& pos);
 	Posicio(const string& posicio);
